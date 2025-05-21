@@ -1,0 +1,78 @@
+@import './../../../styles/main';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    @include button-text-style;
+
+  &--rounded {
+    margin-top: 24px;
+    border-radius: 60px;
+
+    @include sizing(152px, 32px);
+
+    @include on-tablet {
+      margin-top: 32px;
+
+      @include sizing(227px, 42px);
+    }
+
+    @include on-desctop {
+      margin-top: 60px;
+
+      @include sizing(206px, 56px);
+    }
+
+    @include on-big-desctop {
+      margin-top: 50px;
+
+      @include sizing(400px, 77px);
+    }
+  }
+
+  &--with-light-radius {
+    border-radius: 10px;
+    height: 42px;
+    width: 149px;
+    &-filled {
+      border-radius: 10px;
+      height: 42px;
+      width: 149px;
+      width: 100%;
+    }
+
+    &-bordered {
+      border-radius: 10px;
+      height: 42px;
+      width: 149px;
+
+      @include on-tablet {
+        @include sizing(201px, 46px);
+      }
+
+      @include on-desctop {
+        @include sizing(210px, 60px);
+      }
+      
+      @include on-big-desctop {
+        @include sizing(350px, 88px);
+      }
+    }
+  }
+
+  &--filled {
+    background-color: $accent-color;
+    color: #fff !important;
+  }
+
+  &--bordered  {
+    border: 5px solid $accent-color;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}

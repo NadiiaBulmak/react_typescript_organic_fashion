@@ -1,0 +1,139 @@
+@import './../../styles/main';
+
+.section {
+&-main {
+  display: flex;
+  overflow-x: hidden;
+  background-color: $background-color-medium;
+  padding: 32px;
+
+  @include padding-inline;
+  
+  @include on-tablet {
+    justify-content: center;
+  }
+}
+
+  &__title-main {
+    width: 100%;
+
+    @include main-title-style;
+  }
+
+  &__content--main {
+    max-width: 1800px;
+    display: flex;
+    gap: 20px;
+
+    @include on-tablet {
+      align-items: center;
+      flex-direction: row-reverse;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    @include on-desctop {
+      gap: 120px
+    }
+
+    @include on-big-desctop {
+      gap: 70px;
+    }
+  }
+
+  &__info--main {
+    width: 100%;
+    min-width: 166px;
+
+    @include on-tablet {
+      width: 520px;
+    }
+
+    @include on-desctop {
+      min-width: 530px;
+    }
+
+    @include on-big-desctop {
+      width: 970px;
+    }
+  }
+  &__paragraph {
+    @include text-style;
+
+    &--main {
+    width: 100%;
+    margin-top: 18px;
+
+      @include on-tablet {
+        margin-top: 8px;
+        min-width: 420px;
+      }
+
+      @include on-desctop {
+        margin-top: 46px;
+        width: 530px;
+      }
+
+      @include on-big-desctop {
+        margin-top: 40px;
+        width: 918px;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    background-color: $accent-color;
+    color: #fff !important;
+    text-decoration: none;
+    margin-top: 24px;
+
+    @include button-text-style;
+    @include sizing(152px, 32px);
+
+    @include on-tablet {
+      margin-top: 32px;
+
+      @include sizing(227px, 42px);
+    }
+
+    @include on-desctop {
+      margin-top: 60px;
+
+      @include sizing(206px, 56px);
+    }
+
+    @include on-big-desctop {
+      margin-top: 50px;
+
+      @include sizing(292px, 77px);
+    }
+  }
+
+  &__img-content {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__main-img {
+    object-fit: cover;
+
+    @include sizing(220px, 282px);
+
+    @include on-tablet {
+      @include sizing(320px, 330px);
+    }
+
+    @include on-desctop {
+      @include sizing(410px, 422px);
+    }
+
+    @include on-big-desctop {
+      @include sizing (578px, 596px);
+    }
+  }
+}

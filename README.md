@@ -1,1 +1,0 @@
-# react_typescript_organic_fashion

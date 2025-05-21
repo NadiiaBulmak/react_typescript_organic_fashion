@@ -1,0 +1,139 @@
+@import './../../styles/main';
+
+.section {
+  scroll-margin-top: 60px;
+
+  @include on-tablet {
+    scroll-margin-top: 100px;
+  }
+
+  @include on-desctop {
+    scroll-margin-top: 120px;
+  }
+
+  @include on-big-desctop {
+    scroll-margin-top: 160px;
+  }
+
+  &__container-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include on-tablet {
+      flex-direction: row;
+      text-align: left;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1000px;
+    }
+
+    @include on-desctop {
+      gap: 160px;
+      max-width: 1800px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @include on-tablet {
+      align-items: flex-start;
+    }
+  }
+
+&__about-us {
+  display: flex;
+  justify-content: center;
+  background-color: $background-color-medium;
+  padding-block: 24px 90px;
+  flex-direction: column;
+
+  @include padding-inline;
+
+  @include on-tablet {
+    flex-direction: row;
+    padding-block: 68px 45px;
+  }
+
+  @include on-desctop {
+    padding-block: 107px 128px;
+  }
+
+  @include on-big-desctop {
+    padding-block: 160px 103px;
+  }
+}
+
+  &__title-bold {
+    width: 100%;
+
+    @include section-title-bold-style;
+
+    @include on-tablet {
+      text-align: left;
+    }
+  }
+
+  &__paragraph {
+    width: 100%;
+    margin-top: 18px;
+    margin-top: 0;
+
+    @include text-style;
+
+    @include on-tablet {
+      margin-top: 8px;
+      min-width: 420px;
+    }
+
+    @include on-desctop {
+      margin-top: 46px;
+      min-width: 530px;
+    }
+
+    @include on-big-desctop {
+      width: 918px;
+    }
+    &-first {
+      margin-top: 0;
+    }
+    &-second {
+      margin-top: 0;
+    }
+  }
+
+  &__img-about-us {
+    display: none;
+    object-fit: cover;
+
+    @include on-tablet {
+      display: block;
+
+      @include sizing(252px, 508px);
+    }
+
+    @include on-desctop {
+      @include sizing(316px, 626px);
+    }
+
+    @include on-big-desctop {
+      @include sizing(474px, 938px);
+    }
+
+    &-mob {
+      @include sizing(198px, 250px);
+
+      @include on-tablet {
+        display: none;
+      }
+    }
+  }
+}

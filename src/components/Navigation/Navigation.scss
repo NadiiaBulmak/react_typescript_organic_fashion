@@ -1,0 +1,44 @@
+@import './../../styles/main';
+
+.nav {
+  &--mobile {
+    display: block;
+
+    @include on-tablet {
+      display: none;
+    }
+  }
+
+  &--tablet-desctop {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding: 0;
+    &--mobile {
+      flex-direction: column;
+      gap: 30px;
+      justify-content: center
+    }
+  }
+
+  &__item {
+    @include nav-text-style;
+
+    @include on-tablet {
+      @include smooth-hover;
+    }
+  }
+
+  &__link {
+    color: $text-color;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,99 @@
+@import './../../styles/main';
+
+.section__form {
+  margin-top: 33px;
+
+  @include on-tablet {
+    margin-top: 26px;
+  }
+
+  @include on-desctop {
+    margin-top: 33px;
+  }
+
+  @include on-big-desctop {
+    margin-top: 60px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  &__input {
+    padding: 12px;
+    border: 3px solid $accent-color;
+    border-radius: 10px;
+    font-family: inherit;
+    resize: none;
+    height: 81px;
+    align-items: center;
+    font-size: 16px;
+
+    @include on-tablet {
+      font-size: 20px;
+      height: 63px;
+    }
+
+    @include on-desctop {
+      height: 81px;
+    }
+
+    @include on-big-desctop {
+      font-size: 36px;
+      height: 120px;
+    }
+  }
+
+    &__textarea {
+      padding: 12px;
+      border: 3px solid $accent-color;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 16px;
+      resize: none;
+      height: 130px;
+      width: 100%;
+
+      @include on-tablet {
+        height: 100px;
+        font-size: 20px;
+      }
+
+      @include on-desctop {
+        height: 130px;
+      }
+
+      @include on-big-desctop {
+        font-size: 36px;
+      }
+    }
+
+    button {
+      padding: 14px;
+      height: 47px;
+      border: none;
+      background-color: $accent-color;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+
+
+
+      @include on-desctop {
+        @include sizing(210px, 60px);
+      }
+
+      @include on-big-desctop {
+        @include sizing(370px, 90px);
+      }
+    }
+    
+    @include button-text-style;
+}
+

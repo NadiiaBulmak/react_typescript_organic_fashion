@@ -1,0 +1,12 @@
+@import './../../styles/main';
+
+.burger-menu {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 5;
+  background-color: $background-color-medium;
+  
+  @include padding-inline;
+}

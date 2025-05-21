@@ -1,0 +1,179 @@
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin on-desctop {
+  @media (min-width: $desctop-min-width) {
+    @content;
+  }
+}
+
+@mixin on-big-desctop {
+  @media (min-width: $big-desctop-min-width) {
+    @content;
+  }
+}
+
+@mixin sizing($width, $height) {
+  & {
+    width: $width;
+    height: $height;
+  }
+
+  @include on-big-desctop {
+    @content;
+  }
+}
+
+@mixin brand-title-text-style {
+  & {
+    font-family: "Crimson Text", 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    @include on-big-desctop {
+      font-size: 36px;
+    }
+  }
+}
+
+
+@mixin nav-text-style {
+  font-family: "Crimson Text", 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  & {
+    @include on-big-desctop {
+      font-size: 36px;
+    }
+  }
+}
+
+@mixin main-title-style {
+  font-family: "Crimson Text", 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 15%;
+
+  & {
+    @include on-tablet {
+      font-size: 48px;
+    }
+
+    @include on-big-desctop {
+      font-size: 90px;
+    }
+  }
+}
+
+@mixin text-style {
+  font-family: "Crimson Text", 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+
+  & {
+    @include on-tablet {
+      font-size: 20px;
+    }
+
+    @include on-big-desctop {
+      font-size: 36px;
+    }
+  }
+}
+
+@mixin button-text-style {
+  & {
+    font-family: "Crimson Text", 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @include on-tablet {
+    font-size: 20px;
+  }
+
+  @include on-big-desctop {
+    font-size: 36px;
+  }
+}
+
+@mixin section-title-style {
+  & {
+    font-family: "Crimson Text", 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 15%;
+    text-align: center;
+
+    @include on-tablet {
+      font-size: 32px;
+    }
+
+    @include on-big-desctop {
+      font-size: 48px;
+    }
+  }
+}
+
+@mixin section-title-bold-style {
+  & {
+    font-family: "Crimson Text", 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 15%;
+    text-align: center;
+
+    @include on-tablet {
+      font-size: 32px;
+    }
+
+    @include on-big-desctop {
+      font-size: 48px;
+    }
+  }
+}
+
+@mixin padding-inline {
+  padding-inline: 32px;
+
+  & {
+    @include on-tablet {
+      padding-inline: 60px;
+    }
+
+    @include on-desctop {
+      padding-inline: 144px;
+    }
+
+    @include on-big-desctop {
+      padding-inline: 196px;
+    }
+  }
+}
+
+@mixin smooth-hover {
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

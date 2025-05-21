@@ -1,0 +1,50 @@
+@import './../../styles/main';
+
+.header {
+  background-color: $background-color-medium;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  @include padding-inline;
+  @include brand-title-text-style;
+
+  @include on-tablet {
+    height: 100px;
+  }
+
+  @include on-desctop {
+    height: 120px;
+  }
+
+  @include on-big-desctop {
+    height: 160px;
+  }
+
+  &__left {
+    @include smooth-hover;
+  }
+
+  &__menu {
+    background-image: url('./../../images/icons/burger-closed.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include sizing(48px, 36px);
+
+    @include on-tablet {
+      display: none;
+    }
+
+    &--opened {
+      background-image: url('./../../images/icons/burger-opened.png');
+      position: relative;
+      right: 14px;
+    }
+  }
+}

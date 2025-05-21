@@ -1,0 +1,134 @@
+@import './../../styles/main';
+
+.section {
+  &__collection {
+    background: linear-gradient(to bottom, $background-color-light 50%, $background-color-dark 50%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 60px;
+
+    @include padding-inline;
+
+    @include on-tablet {
+      padding-bottom: 70px;
+    }
+
+    @include on-desctop {
+      gap: 14px;
+      padding-bottom: 150px;
+    }
+
+    @include on-big-desctop {
+      gap: 18px;
+      padding-bottom: 133px;
+    }
+  }
+
+  &__title-small {
+    width: 100%;
+    padding-block: 22px;
+
+    @include section-title-style;
+
+    @include on-tablet {
+      padding-block: 42px;
+      width: 312px;
+    }
+
+    @include on-desctop {
+      width: 100%;
+      padding-block: 70px;
+    }
+
+    @include on-big-desctop {
+      padding-block: 60px;
+    }
+  }
+
+  &__imgs {
+    display: flex;
+    position: relative;
+    &--rounded {
+      gap: 28px;
+
+      @include on-tablet {
+        gap: 67px;
+      }
+
+      @include on-desctop {
+        gap: 86px;
+      }
+
+      @include on-big-desctop {
+        gap: 129px;
+      }
+    }
+  }
+
+  &__img {
+    &--rounded {
+    position: relative;
+    border-radius: 170px 170px 0 0;
+
+    @include sizing(151px, 153px);
+
+    @include on-tablet{
+      @include sizing(261px, 263px);
+    }
+
+    @include on-desctop {
+      @include sizing(338px, 344px);
+    }
+
+    @include on-big-desctop {
+      @include sizing(502px, 506px);
+    }
+    }
+
+    &--small {
+      position: relative;
+      top: -20px;
+
+      @include sizing(143px, 154px);
+
+      @include on-tablet{
+        top: 0;
+        
+        @include sizing(261px, 263px);
+      }
+
+      @include on-desctop {
+        @include sizing(338px, 344px);
+      }
+
+      @include on-big-desctop {
+        @include sizing(502px, 506px);
+      }
+    }
+  }
+
+  &__paragraph {
+    &--collection {
+      text-align: center;
+      margin-top: 25px;
+
+      @include on-tablet {
+        margin-top: 48px;
+        font-size: 32px;
+      }
+
+      @include on-desctop {
+        margin-top: 62px;
+      }
+
+      @include on-big-desctop {
+        font-size: 40px;
+        margin-top: 92px;
+      }
+    }
+  }
+}

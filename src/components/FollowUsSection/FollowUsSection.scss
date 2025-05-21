@@ -1,0 +1,44 @@
+@import './../../styles/main';
+
+.section {
+  &__follow-us {
+    background: linear-gradient(to bottom, $background-color-light 67%, $background-color-dark 34%);
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 34px 60px 77px;
+    justify-content: center;
+    gap: 64px;
+    align-items: center;
+
+    @include on-tablet {
+      padding: 90px 90px 100px;
+      flex-direction: row-reverse;
+      gap: 50px;
+      background: linear-gradient(to right, $background-color-light 67%, $background-color-dark 34%);
+    }
+  }
+
+  &__form-info {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  &__img-follow-us {
+    object-fit: cover;
+
+    @include sizing(243px, 345px);
+
+    @include on-tablet {
+      @include sizing(302px, 429px);
+    }
+
+    @include on-desctop {
+      @include sizing(439px, 624px);
+    }
+
+    @include on-big-desctop {
+      @include sizing(657px, 934px)
+    }
+  }
+}
