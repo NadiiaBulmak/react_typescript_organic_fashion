@@ -1,8 +1,8 @@
 # react_typescript_organic_fashion
 # 💻 Test Task — React Layout from Figma
 
-   - 📁 GitHub repository (source code)
-   - 🌍 Live deployed version (preview)
+   - 📁 [GitHub repository (source code)](https://github.com/NadiiaBulmak/react_typescript_organic_fashion)
+   - 🌍 [Live deployed version (preview)](https://nadiiabulmak.github.io/react_typescript_organic_fashion/)
 
 ## 🧩 Task
 
