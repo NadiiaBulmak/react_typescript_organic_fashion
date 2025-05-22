@@ -56,7 +56,7 @@
       @include on-desctop {
         @include sizing(210px, 60px);
       }
-      
+
       @include on-big-desctop {
         @include sizing(350px, 88px);
       }
@@ -70,6 +70,7 @@
 
   &--bordered  {
     border: 5px solid $accent-color;
+    color: $text-color;
   }
 
   &:visited {
