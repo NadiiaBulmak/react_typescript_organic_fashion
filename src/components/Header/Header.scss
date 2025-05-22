@@ -31,7 +31,7 @@
   }
 
   &__menu {
-    background-image: url('./../../images/icons/burger-closed.png');
+    background-image: url('/images/icons/burger-closed.png');
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -42,7 +42,7 @@
     }
 
     &--opened {
-      background-image: url('./../../images/icons/burger-opened.png');
+      background-image: url('/images/icons/burger-opened.png');
       position: relative;
       right: 14px;
     }

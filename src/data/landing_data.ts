@@ -1,4 +1,5 @@
 import { LandingDataType } from '../types/LandingDataType';
+const base = import.meta.env.BASE_URL;
 
 const LandingData: LandingDataType = {
   main: {
@@ -7,10 +8,10 @@ const LandingData: LandingDataType = {
       // eslint-disable-next-line max-len
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     images: {
-      '375': ['/images/375/main.png'],
-      '992': ['/images/992/main.png'],
-      '1366': ['/images/1366/main.png'],
-      '1920': ['/images/1920/main.png'],
+      '375': [`${base}images/375/main.png`],
+      '992': [`${base}images/992/main.png`],
+      '1366': [`${base}images/1366/main.png`],
+      '1920': [`${base}images/1920/main.png`],
     },
     button_text: 'SHOP NOW',
   },
